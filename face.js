@@ -1,7 +1,9 @@
 var Face = (function (document, moment) {
 
     var body = document.getElementsByTagName('body')[0];
-    
+
+    body.style.fontSize = 0.35 * body.offsetWidth + '%';
+
     return {
 	create: function(row, column, timezone) {
 	    if(timezone === undefined) {
