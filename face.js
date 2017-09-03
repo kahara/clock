@@ -2,7 +2,7 @@ var Face = (function (document, moment) {
 
     var body = document.getElementsByTagName('body')[0];
 
-    body.style.fontSize = 0.35 * body.offsetWidth + '%';
+    body.style.fontSize = 0.375 * body.offsetWidth + '%';
 
     return {
 	create: function(row, column, timezone, format, rows, columns) {
@@ -36,7 +36,7 @@ var Face = (function (document, moment) {
 
 	    var element_timezone = document.createElement('p');
 	    element_timezone.style.fontSize = '65%';
-	    element_timezone.style.paddingTop = '15%';
+	    element_timezone.style.paddingTop = '25%';
 	    element_timezone.style.paddingLeft = '15%';
 
 	    var textnode_timezone = document.createTextNode(face['timezone_string']);

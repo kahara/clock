@@ -1,9 +1,9 @@
 var Clock = (function (window, _, URI, Face) {
 
     const defaults = {
-	rows: ['integer', undefined, 3],
+	rows: ['integer', undefined, 2],
 	columns: ['integer', undefined, 3],
-	faces: ['string', 'array', ['Etc/UTC', 'Europe/Stockholm', 'Europe/Helsinki', 'Europe/London', 'Europe/Berlin', 'Europe/Istanbul', 'Europe/Madrid', 'Europe/Rome', 'Asia/Jerusalem']],
+	faces: ['string', 'array', ['Etc/UTC', 'Europe/Stockholm', 'Europe/Helsinki', 'Europe/London', 'Europe/Berlin', 'Europe/Istanbul']],
 	format: ['string', undefined, 'H:mm:ss']
     };
 
