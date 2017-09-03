@@ -5,7 +5,7 @@ var Face = (function (document, moment) {
     body.style.fontSize = 0.35 * body.offsetWidth + '%';
 
     return {
-	create: function(row, column, timezone) {
+	create: function(row, column, timezone, rows, columns) {
 	    if(timezone === undefined) {
 		return undefined;
 	    }
@@ -25,13 +25,26 @@ var Face = (function (document, moment) {
 	    };
 
 	    var element_root = document.createElement('div');
-	    
+	    element_root.style.height = Math.floor(100/rows) + '%';
+	    element_root.style.width = Math.floor(100/columns) + '%';
+	    element_root.style.margin = '0px';
+	    element_root.style.border = '0px';
+	    element_root.style.padding = '0px';
+	    element_root.style.float = 'left';
+
+	    console.log(element_root.style);
+
 	    var element_timezone = document.createElement('p');
+	    element_timezone.style.fontSize = '65%';
+	    element_timezone.style.paddingTop = '15%';
+	    element_timezone.style.paddingLeft = '15%';
+
 	    var textnode_timezone = document.createTextNode(face['timezone_string']);
 	    element_timezone.appendChild(textnode_timezone);
 	    element_root.appendChild(element_timezone);
 	    
 	    var element_time = document.createElement('p');
+	    element_time.style.paddingLeft = '15%';
 	    var textnode_time = document.createTextNode('…');
 	    element_time.appendChild(textnode_time);
 	    element_root.appendChild(element_time);

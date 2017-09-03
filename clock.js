@@ -47,7 +47,7 @@ var Clock = (function (window, _, URI, Face) {
 	    for(i=0; i < settings['rows']; i++) {
 		console.log(i);
 		for(j=0; j < settings['columns']; j++) {
-		    var face = Face.create(i, j, settings['faces'].shift());
+		    var face = Face.create(i, j, settings['faces'].shift(), settings['rows'], settings['columns']);
 		    if(face !== undefined) {
 			faces.push(face);
 		    }
