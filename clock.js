@@ -1,9 +1,10 @@
 var Clock = (function (window, _, URI, Face) {
 
     const defaults = {
-	rows: ['integer', undefined, 1],
-	columns: ['integer', undefined, 1],
-	faces: ['string', 'array', ['Etc/UTC']]
+	rows: ['integer', undefined, 3],
+	columns: ['integer', undefined, 3],
+	faces: ['string', 'array', ['Etc/UTC', 'Europe/Stockholm', 'Europe/Helsinki', 'Europe/London', 'Europe/Berlin', 'Europe/Istanbul', 'Europe/Madrid', 'Europe/Rome', 'Asia/Jerusalem']],
+	format: ['string', undefined, 'H:mm:ss']
     };
 
     var settings = {};
@@ -47,7 +48,7 @@ var Clock = (function (window, _, URI, Face) {
 	    for(i=0; i < settings['rows']; i++) {
 		console.log(i);
 		for(j=0; j < settings['columns']; j++) {
-		    var face = Face.create(i, j, settings['faces'].shift(), settings['rows'], settings['columns']);
+		    var face = Face.create(i, j, settings['faces'].shift(), settings['format'], settings['rows'], settings['columns']);
 		    if(face !== undefined) {
 			faces.push(face);
 		    }
