@@ -1,3 +1,5 @@
-* { font-family: sans-serif; background-color: #fff; color: #455; }
+* { background-color: #fff; color: #455; }
+
+p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 html, body { height: 100%; width: 100%; }
