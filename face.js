@@ -5,7 +5,7 @@ var Face = (function (document, moment) {
     body.style.fontSize = 0.35 * body.offsetWidth + '%';
 
     return {
-	create: function(row, column, timezone, rows, columns) {
+	create: function(row, column, timezone, format, rows, columns) {
 	    if(timezone === undefined) {
 		return undefined;
 	    }
@@ -55,7 +55,7 @@ var Face = (function (document, moment) {
 
 	    face['render'] = function() {
 		try {
-		    var time = moment.tz(moment(), face['timezone']).format('H:mm:ss');
+		    var time = moment.tz(moment(), face['timezone']).format(format);
 		    if(time != face['time_string']) {
 			face['time_string'] = time;
 			face['textnode_time'].nodeValue = time;
